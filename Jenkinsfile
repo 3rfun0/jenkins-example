@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'gcc mt-example-0.c -lpthread'
+                sh 'gcc app.c -lpthread'
 
             }
         }
