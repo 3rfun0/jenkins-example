@@ -5,7 +5,7 @@
 
 void * workerThreadFunc(void * tid){
   long * myID = (long *) tid;
-  printf("HELLO WORLD! FROM THREAD %ld\n",*myID);
+  printf("HELLO WORLD! FROM TEST BRANCH %ld\n",*myID);
 }
 
 int main(){
