@@ -4,6 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'gcc app.c -lpthread'
+                sh "which gcc || apt install gcc"
 
             }
         }
@@ -14,7 +15,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'echo Done!'
+                sh 'docker build -t helloworld:latest .'
             }
         }
     }
